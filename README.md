@@ -1,0 +1,5 @@
+- run chip monitor
+- run chip handler
+- run face-enrolment
+- run pepper monitor
+- produce snippets to demonstrate each. snippets can be in any language
