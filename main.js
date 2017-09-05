@@ -46,8 +46,19 @@ function init(){
             timeout: 5
         }];
         pepperMonitor.publish({
-            data: JSON.stringify(messages),
-            eaosuntehoa: "ousnthoe"
+            data: JSON.stringify(messages)
+        });
+    }
+
+    var sayTopic = ros.Topic({
+        name: '/speech',
+        messageType: 'std_msgs/String'
+    });
+    sayTopic.subscribe((msg)=>{console.log(msg)})
+    window.sayText = function (){
+        var input = document.querySelector('[name="text_to_show"]');
+        sayTopic.publish({
+            data: input.value
         });
     }
 }
