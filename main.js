@@ -1,7 +1,6 @@
 // connect to ROS
 
 var ros = new ROSLIB.Ros({
-    // url: "ws://192.168.1.26:9090/"
     url: "ws://insanity.local:9090/"
 });
 
@@ -47,7 +46,8 @@ function init(){
             timeout: 5
         }];
         pepperMonitor.publish({
-            data: JSON.stringify(messages)
+            data: JSON.stringify(messages),
+            eaosuntehoa: "ousnthoe"
         });
     }
 }
